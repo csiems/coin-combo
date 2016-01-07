@@ -4,21 +4,27 @@ import static org.junit.Assert.*;
 public class AppUnitTest {
 
 @Test
-public void howMuchChange_forQuartersReceived_three() {
+public void howMuchChange_forQuartersReceived_oneQuarter() {
   App appTest = new App();
-  assertEquals("You receive 3 quarters, 0 dimes, 0 nickels, and 0 pennies", appTest.howMuchChange(75));
+  assertEquals("1 quarter", appTest.howMuchChange("25"));
 }
 
 @Test
-public void howMuchChange_forDimesReceived_threeQuartersTwoDimes() {
+public void howMuchChange_forDimesReceived_oneDime() {
   App appTest = new App();
-  assertEquals("You receive 3 quarters, 2 dimes, 0 nickels, and 0 pennies", appTest.howMuchChange(95));
+  assertEquals("1 dime", appTest.howMuchChange("10"));
 }
 
 @Test
-public void howMuchChange_forNickelReceived_oneQuarterOneDimeOneNickel() {
+public void howMuchChange_forNickelReceived_oneNickel() {
   App appTest = new App();
-  assertEquals("You receive 1 quarters, 1 dimes, 1 nickels, and 0 pennies", appTest.howMuchChange(40));
+  assertEquals("1 nickel", appTest.howMuchChange("5"));
+}
+
+@Test
+public void howMuchChange_forPenniesReceived_onePenn() {
+  App appTest = new App();
+  assertEquals("One penn", appTest.howMuchChange("1"));
 }
 
 }
