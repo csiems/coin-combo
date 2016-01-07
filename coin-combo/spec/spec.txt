@@ -1,0 +1,18 @@
+1.
+Behavior: When a user gives a change amount, they are given the number of quarters they will receive back.
+Input: 75
+Output: 3 quarter(s)
+
+2.
+Behavior: When a user gives a change amount and quarters have been calculated, they will be given the number of dimes they will receive in addition.
+Input: 95
+Output: 3 quarter(s), 2 dime(s)
+
+3.
+Behavior: When a user gives a change amount and quarters and dimes have been calculated, they will be given the number of nickels they will receive in addition.
+Input: 40
+Output: 1 quarter(s), 1 dime(s), 1 nickel(s)
+
+4. Behavior: When a user gives a change amount and quarters, dimes and nickels have been calculated, they will be given the number of pennies they will receive in addition.
+Input: 4
+Output: 4 pennies
