@@ -41,7 +41,7 @@ public class App {
     Integer nickels = 0;
     Integer pennies = 0;
     Integer quartersLimit = 1;
-    Integer dimesLimit = 0;
+    Integer dimesLimit = 1;
     Integer nickelsLimit = 3;
 
     Integer userInputAsInteger = Integer.parseInt(userInput);
@@ -50,24 +50,18 @@ public class App {
     //   if (userInputAsInteger > 24 && quartersLimit > 0) {
     //     userInputAsInteger -= 25;
     //     quarters++;
-    //     quartersLimit--;
-    //     if(quarterLimit == 0) {
-    //       output = output += "<p>We are out of quarters</p>";
-    //     }
     //   } else if (userInputAsInteger > 9 && dimesLimit > 0) {
     //     userInputAsInteger -= 10;
     //     dimes++;
-    //     dimesLimit--;
-    //
     //   } else if (userInputAsInteger > 4 && nickelsLimit > 0) {
     //     userInputAsInteger -= 5;
     //     nickels++;
-    //     nickelsLimit--;
     //   } else {
     //     userInputAsInteger -=1;
     //     pennies++;
     //   }
     // }
+    
     String output = "";
 
     while (userInputAsInteger > 0) {
