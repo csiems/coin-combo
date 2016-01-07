@@ -6,25 +6,25 @@ public class AppUnitTest {
 @Test
 public void howMuchChange_forQuartersReceived_oneQuarter() {
   App appTest = new App();
-  assertEquals("1 quarter", appTest.howMuchChange("25"));
+  assertEquals("<li>1 quarter</li>", appTest.howMuchChange("25"));
 }
 
 @Test
 public void howMuchChange_forDimesReceived_oneDime() {
   App appTest = new App();
-  assertEquals("1 dime", appTest.howMuchChange("10"));
+  assertEquals("<li>1 dime</li>", appTest.howMuchChange("10"));
 }
 
 @Test
 public void howMuchChange_forNickelReceived_oneNickel() {
   App appTest = new App();
-  assertEquals("1 nickel", appTest.howMuchChange("5"));
+  assertEquals("<li>1 nickel</li>", appTest.howMuchChange("5"));
 }
 
 @Test
 public void howMuchChange_forPenniesReceived_onePenn() {
   App appTest = new App();
-  assertEquals("One penn", appTest.howMuchChange("1"));
+  assertEquals("<li>1 penny</li>", appTest.howMuchChange("1"));
 }
 
 }
