@@ -40,19 +40,58 @@ public class App {
     Integer dimes = 0;
     Integer nickels = 0;
     Integer pennies = 0;
+    Integer quartersLimit = 1;
+    Integer dimesLimit = 0;
+    Integer nickelsLimit = 3;
 
     Integer userInputAsInteger = Integer.parseInt(userInput);
 
+    // while (userInputAsInteger > 0) {
+    //   if (userInputAsInteger > 24 && quartersLimit > 0) {
+    //     userInputAsInteger -= 25;
+    //     quarters++;
+    //     quartersLimit--;
+    //     if(quarterLimit == 0) {
+    //       output = output += "<p>We are out of quarters</p>";
+    //     }
+    //   } else if (userInputAsInteger > 9 && dimesLimit > 0) {
+    //     userInputAsInteger -= 10;
+    //     dimes++;
+    //     dimesLimit--;
+    //
+    //   } else if (userInputAsInteger > 4 && nickelsLimit > 0) {
+    //     userInputAsInteger -= 5;
+    //     nickels++;
+    //     nickelsLimit--;
+    //   } else {
+    //     userInputAsInteger -=1;
+    //     pennies++;
+    //   }
+    // }
+    String output = "";
+
     while (userInputAsInteger > 0) {
-      if (userInputAsInteger > 24) {
+      if (userInputAsInteger > 24 && quartersLimit > 0) {
         userInputAsInteger -= 25;
         quarters++;
-      } else if (userInputAsInteger > 9) {
+        quartersLimit--;
+        if(quartersLimit == 0) {
+          output = output += "<p class='warning'>I'm sorry we only have a limited amount of quarters.</p>";
+        }
+      } else if (userInputAsInteger > 9 && dimesLimit > 0) {
         userInputAsInteger -= 10;
         dimes++;
-      } else if (userInputAsInteger > 4) {
+        dimesLimit--;
+        if (dimesLimit == 0) {
+          output = output += "<p class='warning'>I'm sorry we only have a limited amount of dimes.</p>";
+        }
+      } else if (userInputAsInteger > 4 && nickelsLimit > 0) {
         userInputAsInteger -= 5;
         nickels++;
+        nickelsLimit--;
+        if (nickelsLimit == 0) {
+          output = output += "<p class='warning'>I'm sorry we only have a limited amount of nickels.</p>";
+        }
       } else {
         userInputAsInteger -=1;
         pennies++;
@@ -96,7 +135,8 @@ public class App {
       penniesString = "";
     }
 
-    String output = quartersString + dimesString + nickelsString + penniesString;
+    output += "<h2>You should receive:</h2>" + (quartersString + dimesString + nickelsString + penniesString);
+
 
     return output;
 
