@@ -12,21 +12,21 @@ public class AppIntegrationTest extends FluentTest {
     return webDriver;
   }
 
-  @ClassRule
-  public static ServerRule server = new ServerRule();
-
-  @Test
-  public void rootTest() {
-    goTo("http://localhost:4567/");
-    assertThat(pageSource()).contains("//insert page contents here for testing//")
-    //This tests is a page contains particular contents
-
-  @Test public void testNameHere() {
-    goTo("http://localhost:4567/");
-    fill("#tag").with("userInput");
-    submit(".btn");
-    assertThat(pageSource()).contains("//userInput//")
-    //This tests if a tagged fill is outputing correctly with the user input in the right place.
-  }
-  }
+  // @ClassRule
+  // public static ServerRule server = new ServerRule();
+  //
+  // @Test
+  // public void rootTest() {
+  //   goTo("http://localhost:4567/");
+  //   assertThat(pageSource()).contains("//insert page contents here for testing//")
+  //   //This tests is a page contains particular contents
+  //
+  // @Test public void testNameHere() {
+  //   goTo("http://localhost:4567/");
+  //   fill("#tag").with("userInput");
+  //   submit(".btn");
+  //   assertThat(pageSource()).contains("//userInput//");
+  //   //This tests if a tagged fill is outputing correctly with the user input in the right place.
+  // }
+  // }
 }
